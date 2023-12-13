@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- Set the language -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Frogs With Hats On Rocks</title>
+        <!-- CSS Styling for looks -->
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: aquamarine;
+            }
+            /* Style the player container */
+            #player{
+                background-color: gray;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Style the audio controls (buttons) */
+            button{
+                margin: 5px;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                background-color: yellowgreen;
+                color: white;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Frogs With Hats On Rocks</h1>
+        <p>An orignal by Jada McClendon</p>
+        <div id="player">
+            <audio id="audio" src="Frogs with hats on rocks .mp3"></audio>
+
+                <button onclick="playAudio()">Play</button>
+                <button onclick="pauseAudio()">Pause</button>
+                <button onclick="stopAudio()">Stop</button>
+
+        </div>
+        <!-- Add Javascript -->
+        <script>
+            var audio = document.getElementById("audio");
+            // Javascript starts the audio when called upon
+            function playAudio() {
+                audio.play();
+            }
+            // Javascript stops the audio when called upon
+            function pauseAudio() {
+                audio.pause();
+            }
+            // Javascrips stops the audio and resets the audio when called upon
+            function stopAudio() {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        </script>
+    </body>
+</html>
